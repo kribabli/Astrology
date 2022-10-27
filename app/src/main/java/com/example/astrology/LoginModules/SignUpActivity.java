@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ public class SignUpActivity extends AppCompatActivity {
     FirebaseDatabase database;
     EditText mobileNo, enterOTP;
     private String verificationId;
+    LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +42,11 @@ public class SignUpActivity extends AppCompatActivity {
             } else {
                 String phone = "+91" + mobileNo.getText().toString();
                 sendVerificationCode(phone);
-                enterOTP.setVisibility(View.VISIBLE);
-                verifyOTP.setVisibility(View.VISIBLE);
+                linearLayout1.setVisibility(View.GONE);
+                linearLayout2.setVisibility(View.GONE);
 
-                mobileNo.setVisibility(View.GONE);
-                sendOTP.setVisibility(View.GONE);
+                linearLayout3.setVisibility(View.VISIBLE);
+                linearLayout4.setVisibility(View.VISIBLE);
 
                 verifyOTP.setOnClickListener(view -> {
                     if (TextUtils.isEmpty(enterOTP.getText().toString())) {
@@ -62,6 +64,11 @@ public class SignUpActivity extends AppCompatActivity {
         enterOTP = findViewById(R.id.OTPEd);
         sendOTP = findViewById(R.id.OTP);
         verifyOTP = findViewById(R.id.verify);
+        linearLayout1 = findViewById(R.id.linearLayout1);
+        linearLayout2 = findViewById(R.id.linearLayout2);
+        linearLayout3 = findViewById(R.id.linearLayout3);
+        linearLayout4 = findViewById(R.id.linearLayout4);
+
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         FirebaseApp.initializeApp(this);
