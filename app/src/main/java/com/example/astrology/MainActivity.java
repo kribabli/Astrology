@@ -22,7 +22,8 @@ import com.example.astrology.BottomFragments.ChatFragment;
 import com.example.astrology.BottomFragments.HistoryFragment;
 import com.example.astrology.BottomFragments.HomeFragment;
 import com.example.astrology.BottomFragments.VideoFragment;
-import com.example.astrology.LoginModules.LoginActivity;
+import com.example.astrology.Common.HelperData;
+import com.example.astrology.LoginModules.SignUpActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private FragmentManager fragmentManager;
     Toolbar toolbar_main;
     boolean doubleBackToExitPressedOnce = false;
+    HelperData helperData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.setNavigationItemSelectedListener(item -> {
             drawerLayout.closeDrawers();
             switch (item.getItemId()) {
-                case R.id.logout:
+                case R.id.settings:
                     userLogout();
                     return true;
                 default:
@@ -81,6 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar_main = findViewById(R.id.toolbar_main);
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.NavigationView);
+        helperData = new HelperData(getApplicationContext());
     }
 
     private void setAction() {
@@ -102,10 +105,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void userLogout() {
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         finish();
+        helperData.Logout();
         Toast.makeText(this, "Logout Successfully", Toast.LENGTH_SHORT).show();
     }
 

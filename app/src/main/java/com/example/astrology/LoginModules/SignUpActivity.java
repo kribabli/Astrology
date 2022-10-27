@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.astrology.Common.HelperData;
 import com.example.astrology.MainActivity;
 import com.example.astrology.R;
 import com.google.firebase.FirebaseApp;
@@ -30,6 +31,7 @@ public class SignUpActivity extends AppCompatActivity {
     EditText mobileNo, enterOTP;
     private String verificationId;
     LinearLayout linearLayout1, linearLayout2, linearLayout3, linearLayout4;
+    HelperData helperData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,7 @@ public class SignUpActivity extends AppCompatActivity {
         linearLayout3 = findViewById(R.id.linearLayout3);
         linearLayout4 = findViewById(R.id.linearLayout4);
 
+        helperData = new HelperData(getApplicationContext());
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         FirebaseApp.initializeApp(this);
@@ -79,7 +82,9 @@ public class SignUpActivity extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         Intent i = new Intent(SignUpActivity.this, MainActivity.class);
-                        i.putExtra("mobileNumber", mobileNo.getText().toString());
+                        i.putExtra("mobile", mobileNo.getText().toString());
+                        helperData.saveLogin(mobileNo.getText().toString());
+                        helperData.saveIsLogin(true);
                         startActivity(i);
                         finish();
                     } else {

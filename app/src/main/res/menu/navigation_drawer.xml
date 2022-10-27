@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/customerSupport"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Customer Support Chat" />
 
     <item
-        android:id="@+id/logout"
+        android:id="@+id/walletTransactions"
+        android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+        android:title="Wallet Transactions" />
+
+    <item
+        android:id="@+id/orderHistory"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="Order History" />
+
+    <item
+        android:id="@+id/astromall"
         android:icon="@drawable/ic_baseline_logout_24"
-        android:title="Logout" />
+        android:title="Astromall" />
+
+    <item
+        android:id="@+id/getReport"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Get Report" />
+
+    <item
+        android:id="@+id/chatWithAstrologers"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Chat with Astrologers" />
+
+    <item
+        android:id="@+id/chatWithCounsellors"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Chat with Counsellors" />
+
+    <item
+        android:id="@+id/myFollowing"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="My Following" />
+
+    <item
+        android:id="@+id/freeServices"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Free Services" />
+
+    <item
+        android:id="@+id/signUpAsAstrologer"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="Sign up as Astrologer" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
 
 </menu>
