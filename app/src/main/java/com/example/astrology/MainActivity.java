@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         break;
                     case R.id.call:
                         CallFragment callFragment = new CallFragment();
-                        loadFragment(callFragment, "Call", fragmentManager);
+                        loadFragment(callFragment, "Call with Astrologer", fragmentManager);
                         bool = true;
                         break;
                     case R.id.history:

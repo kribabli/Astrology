@@ -26,16 +26,46 @@ public class HelperData extends Application {
         editor.apply();
     }
 
-    public void saveLogin(String mobile) {
+    public void saveLogin(String mobile, String userName, String gender, String birthDate, String birthTime, String birthPlace) {
         sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME1, Context.MODE_PRIVATE);
         editor = sharedPreferences.edit();
         editor.putString("mobile", mobile);
+        editor.putString("userName", userName);
+        editor.putString("gender", gender);
+        editor.putString("birthDate", birthDate);
+        editor.putString("birthTime", birthTime);
+        editor.putString("birthPlace", birthPlace);
         editor.apply();
     }
 
     public String getMobile() {
         sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME1, Context.MODE_PRIVATE);
         return sharedPreferences.getString("mobile", "");
+    }
+
+    public String getUserName() {
+        sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME1, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("userName", "");
+    }
+
+    public String getGender() {
+        sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME1, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("gender", "");
+    }
+
+    public String getBirthDate() {
+        sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME1, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("birthDate", "");
+    }
+
+    public String getBirthTime() {
+        sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME1, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("birthTime", "");
+    }
+
+    public String getBirthPlace() {
+        sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME1, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("birthPlace", "");
     }
 
     public void Logout() {

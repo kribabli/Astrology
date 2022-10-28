@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.astrology.Common.HelperData;
 import com.example.astrology.MainActivity;
+import com.example.astrology.NameAndDOBActivity;
 import com.example.astrology.R;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseException;
@@ -86,9 +87,9 @@ public class SignUpActivity extends AppCompatActivity {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        Intent i = new Intent(SignUpActivity.this, MainActivity.class);
+                        Intent i = new Intent(SignUpActivity.this, NameAndDOBActivity.class);
                         i.putExtra("mobile", mobileNo.getText().toString());
-                        helperData.saveLogin(mobileNo.getText().toString());
+                        helperData.saveLogin(mobileNo.getText().toString(),"","","","","");
                         helperData.saveIsLogin(true);
                         startActivity(i);
                         finish();
