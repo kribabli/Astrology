@@ -21,7 +21,7 @@ import com.example.astrology.BottomFragments.CallFragment;
 import com.example.astrology.BottomFragments.ChatFragment;
 import com.example.astrology.BottomFragments.HistoryFragment;
 import com.example.astrology.BottomFragments.HomeFragment;
-import com.example.astrology.BottomFragments.VideoFragment;
+import com.example.astrology.BottomFragments.LiveFragment;
 import com.example.astrology.Common.HelperData;
 import com.example.astrology.LoginModules.SignUpActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -146,8 +146,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         bool = true;
                         break;
                     case R.id.video:
-                        VideoFragment videoFragment = new VideoFragment();
-                        loadFragment(videoFragment, "Video", fragmentManager);
+                        LiveFragment liveFragment = new LiveFragment();
+                        loadFragment(liveFragment, "Live", fragmentManager);
                         bool = true;
                         break;
                     case R.id.call:

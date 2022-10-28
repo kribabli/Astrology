@@ -59,7 +59,7 @@
                 android:layout_height="150dp"
                 android:layout_below="@+id/RelativeLayout1"
                 android:layout_gravity="center"
-                android:src="@drawable/tg_logo" />
+                android:src="@drawable/astrology_logo" />
 
         </LinearLayout>
 

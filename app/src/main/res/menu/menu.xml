@@ -4,31 +4,31 @@
     <item
         android:id="@+id/home"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/ic_home"
         android:title="Home" />
 
     <item
         android:id="@+id/chat"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_chat_24"
+        android:icon="@drawable/ic_chat"
         android:title="Chat" />
 
     <item
         android:id="@+id/video"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_video_camera_front_24"
-        android:title="Video" />
+        android:icon="@drawable/ic_live"
+        android:title="Live" />
 
     <item
         android:id="@+id/call"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_local_phone_black"
+        android:icon="@drawable/ic_call"
         android:title="Call" />
 
     <item
         android:id="@+id/history"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_featured_play_list"
+        android:icon="@drawable/ic_history"
         android:title="History" />
 
 </menu>
