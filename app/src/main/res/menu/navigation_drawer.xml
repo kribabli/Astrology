@@ -2,57 +2,57 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/customerSupport"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/ic_customer_support"
         android:title="Customer Support Chat" />
 
     <item
         android:id="@+id/walletTransactions"
-        android:icon="@drawable/ic_baseline_account_balance_wallet_24"
+        android:icon="@drawable/ic_wallet"
         android:title="Wallet Transactions" />
 
     <item
         android:id="@+id/orderHistory"
-        android:icon="@drawable/ic_baseline_history_24"
+        android:icon="@drawable/order_history"
         android:title="Order History" />
 
     <item
         android:id="@+id/astromall"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/ic_astromall"
         android:title="Astromall" />
 
     <item
         android:id="@+id/getReport"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/ic_get_report"
         android:title="Get Report" />
 
     <item
         android:id="@+id/chatWithAstrologers"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/chatwith_astrologer"
         android:title="Chat with Astrologers" />
 
     <item
         android:id="@+id/chatWithCounsellors"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/chatwith_coun"
         android:title="Chat with Counsellors" />
 
     <item
         android:id="@+id/myFollowing"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/ic_my_following"
         android:title="My Following" />
 
     <item
         android:id="@+id/freeServices"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/free_service"
         android:title="Free Services" />
 
     <item
         android:id="@+id/signUpAsAstrologer"
-        android:icon="@drawable/ic_baseline_logout_24"
+        android:icon="@drawable/ic_sign_up_astrologer"
         android:title="Sign up as Astrologer" />
 
     <item
         android:id="@+id/settings"
-        android:icon="@drawable/ic_baseline_settings_24"
+        android:icon="@drawable/ic_settings"
         android:title="Settings" />
 
 </menu>
