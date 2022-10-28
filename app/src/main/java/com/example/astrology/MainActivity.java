@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-        toolbar_main.setNavigationIcon(R.drawable.ic_baseline_person_24);
+        toolbar_main.setNavigationIcon(R.drawable.ic_baseline_format_list_bulleted_24);
 
         NavigationView navigationView = findViewById(R.id.NavigationView);
         navigationView.setNavigationItemSelectedListener(item -> {
