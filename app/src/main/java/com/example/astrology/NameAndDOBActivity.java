@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.astrology.Common.HelperData;
-import com.example.astrology.LoginModules.SignUpActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -23,11 +22,10 @@ public class NameAndDOBActivity extends AppCompatActivity {
     TextView male, female, other;
     LinearLayout LinearLayout1, LinearLayout2, LinearLayout3, LinearLayout4, LinearLayout5;
     HelperData helperData;
-    private Boolean isSubmitClick = true;
     private Boolean isButtonClick = true;
-    private Boolean isBackClick = true;
     String year = "", monthName = "", dateString = "";
     DatePickerDialog datePickerDialog;
+    TextView backPress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +44,7 @@ public class NameAndDOBActivity extends AppCompatActivity {
         male = findViewById(R.id.male);
         female = findViewById(R.id.female);
         other = findViewById(R.id.other);
+        backPress = findViewById(R.id.backPress);
 
         NEXT1 = findViewById(R.id.NEXT1);
         NEXT2 = findViewById(R.id.NEXT2);
@@ -93,6 +92,13 @@ public class NameAndDOBActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 validation5();
+            }
+        });
+
+        backPress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }
@@ -230,9 +236,6 @@ public class NameAndDOBActivity extends AppCompatActivity {
 
     protected void onResume() {
         super.onResume();
-        isSubmitClick = true;
         isButtonClick = true;
-        isBackClick = true;
     }
-
 }
