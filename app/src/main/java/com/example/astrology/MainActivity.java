@@ -15,8 +15,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.astrology.BottomFragments.CallFragment;
 import com.example.astrology.BottomFragments.ChatFragment;
 import com.example.astrology.BottomFragments.HistoryFragment;
@@ -27,6 +29,8 @@ import com.example.astrology.LoginModules.SignUpActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
@@ -35,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Toolbar toolbar_main;
     boolean doubleBackToExitPressedOnce = false;
     HelperData helperData;
+    CircleImageView profilePic;
+    TextView edit, mobileNo, userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,20 +71,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar_main.setNavigationIcon(R.drawable.ic_baseline_format_list_bulleted_24);
 
         NavigationView navigationView = findViewById(R.id.NavigationView);
+        View header = navigationView.getHeaderView(0);
+
+        edit = header.findViewById(R.id.editTV);
+        mobileNo = header.findViewById(R.id.mobileNo);
+        userName = header.findViewById(R.id.userName);
+        profilePic = header.findViewById(R.id.profilePic);
+
+        mobileNo.setText(helperData.getMobile());
+        userName.setText(helperData.getUserName());
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
         navigationView.setNavigationItemSelectedListener(item -> {
             drawerLayout.closeDrawers();
             switch (item.getItemId()) {
-                case R.id.customerSupport:
-                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                    startActivity(intent);
-                    break;
-                case R.id.settings:
+                case R.id.logout:
                     userLogout();
                     return true;
                 default:
                     return true;
             }
-            return true;
         });
         HomeFragment homeFragment = new HomeFragment();
         loadFragment(homeFragment, "Home", fragmentManager);

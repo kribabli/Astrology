@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/header"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="85dp"
     android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/linerLayout1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="85dp"
         android:elevation="4dp"
         android:gravity="start"
         android:orientation="horizontal">
@@ -65,15 +65,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/RelativeLayout1">
 
             <TextView
                 android:id="@+id/editTV"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
                 android:drawableEnd="@drawable/ic_baseline_edit_24"
-                android:gravity="center" />
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:padding="5dp" />
 
         </RelativeLayout>
 
