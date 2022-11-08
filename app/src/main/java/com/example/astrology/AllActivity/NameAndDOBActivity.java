@@ -1,4 +1,4 @@
-package com.example.astrology;
+package com.example.astrology.AllActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.astrology.Common.HelperData;
+import com.example.astrology.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package com.example.astrology;
+package com.example.astrology.AllActivity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -18,7 +18,6 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
 import com.example.astrology.BottomFragments.CallFragment;
 import com.example.astrology.BottomFragments.ChatFragment;
 import com.example.astrology.BottomFragments.HistoryFragment;
@@ -26,6 +25,7 @@ import com.example.astrology.BottomFragments.HomeFragment;
 import com.example.astrology.BottomFragments.LiveFragment;
 import com.example.astrology.Common.HelperData;
 import com.example.astrology.LoginModules.SignUpActivity;
+import com.example.astrology.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 

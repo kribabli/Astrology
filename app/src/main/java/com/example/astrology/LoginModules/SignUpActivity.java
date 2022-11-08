@@ -14,8 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.astrology.Common.HelperData;
-import com.example.astrology.MainActivity;
-import com.example.astrology.NameAndDOBActivity;
+import com.example.astrology.AllActivity.NameAndDOBActivity;
 import com.example.astrology.R;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseException;

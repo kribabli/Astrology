@@ -1,10 +1,12 @@
-package com.example.astrology;
+package com.example.astrology.AllActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.astrology.R;
 
 public class ProfileActivity extends AppCompatActivity {
     TextView backPress;

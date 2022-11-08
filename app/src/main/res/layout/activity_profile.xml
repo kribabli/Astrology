@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ProfileActivity">
+    tools:context=".AllActivity.ProfileActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -367,6 +367,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/yellow"
+        android:clickable="true"
+        android:foreground="?selectableItemBackground"
         android:gravity="center"
         android:orientation="vertical">
 

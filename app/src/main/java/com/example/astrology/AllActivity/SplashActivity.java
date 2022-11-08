@@ -1,4 +1,4 @@
-package com.example.astrology;
+package com.example.astrology.AllActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 import com.example.astrology.Common.HelperData;
 import com.example.astrology.LoginModules.SignUpActivity;
+import com.example.astrology.R;
 
 public class SplashActivity extends AppCompatActivity {
     Handler handler;

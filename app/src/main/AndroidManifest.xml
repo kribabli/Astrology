@@ -20,14 +20,21 @@
         android:theme="@style/Theme.Astrology"
         tools:targetApi="31">
         <activity
-            android:name=".NameAndDOBActivity"
-            android:exported="false" />
+            android:name=".AllActivity.NameAndDOBActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".ProfileActivity"
-            android:exported="false" />
+            android:name=".AllActivity.KundliMatchingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".SplashActivity"
-            android:exported="true">
+            android:name=".AllActivity.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AllActivity.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,13 +43,16 @@
         </activity>
         <activity
             android:name=".LoginModules.SignUpActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LoginModules.LoginActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+            android:name=".AllActivity.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
