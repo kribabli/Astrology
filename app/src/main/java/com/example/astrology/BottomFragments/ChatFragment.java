@@ -13,10 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.astrology.Fragments.AllFragment;
+import com.example.astrology.Fragments.BusinessFragment;
 import com.example.astrology.Fragments.CareerFragment;
+import com.example.astrology.Fragments.EducationFragment;
+import com.example.astrology.Fragments.FinanceFragment;
 import com.example.astrology.Fragments.HealthFragment;
+import com.example.astrology.Fragments.KidsFragment;
+import com.example.astrology.Fragments.LegalFragment;
 import com.example.astrology.Fragments.LoveFragment;
 import com.example.astrology.Fragments.MarriageFragment;
+import com.example.astrology.Fragments.ParentsFragment;
+import com.example.astrology.Fragments.RemediesFragment;
 import com.example.astrology.Fragments.WealthFragment;
 import com.example.astrology.R;
 import com.google.android.material.tabs.TabLayout;
@@ -35,8 +42,10 @@ public class ChatFragment extends Fragment {
 
     //icon for tabLayout
     private int[] tabIcons = {
-            R.drawable.ic_all, R.drawable.ic_love, R.drawable.ic_career, R.drawable.ic_marriage, R.drawable.ic_health
-            , R.drawable.ic_wealth
+            R.drawable.ic_all, R.drawable.ic_love, R.drawable.ic_career, R.drawable.ic_marriage,
+            R.drawable.ic_health, R.drawable.ic_wealth, R.drawable.ic_finance, R.drawable.ic_business,
+            R.drawable.ic_legal, R.drawable.ic_education, R.drawable.ic_remedies, R.drawable.ic_kids,
+            R.drawable.ic_parents
     };
 
     public ChatFragment() {
@@ -69,9 +78,8 @@ public class ChatFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_chat, container, false);
         viewPager = rootView.findViewById(R.id.viewpager);
         tabLayout = rootView.findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
-        childFragmentManager = getChildFragmentManager();
 
+        childFragmentManager = getChildFragmentManager();
         setUpViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
@@ -86,16 +94,30 @@ public class ChatFragment extends Fragment {
         tabLayout.getTabAt(3).setIcon(tabIcons[3]);
         tabLayout.getTabAt(4).setIcon(tabIcons[4]);
         tabLayout.getTabAt(5).setIcon(tabIcons[5]);
+        tabLayout.getTabAt(6).setIcon(tabIcons[6]);
+        tabLayout.getTabAt(7).setIcon(tabIcons[7]);
+        tabLayout.getTabAt(8).setIcon(tabIcons[8]);
+        tabLayout.getTabAt(9).setIcon(tabIcons[9]);
+        tabLayout.getTabAt(10).setIcon(tabIcons[10]);
+        tabLayout.getTabAt(11).setIcon(tabIcons[11]);
+        tabLayout.getTabAt(12).setIcon(tabIcons[12]);
     }
 
     private void setUpViewPager(ViewPager viewPager) {
-        final ViewPagerAdapter adapter = new ViewPagerAdapter(childFragmentManager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(childFragmentManager);
         adapter.addFragment(new AllFragment(), "All");
         adapter.addFragment(new LoveFragment(), "Love");
         adapter.addFragment(new CareerFragment(), "Career");
         adapter.addFragment(new MarriageFragment(), "Marriage");
         adapter.addFragment(new HealthFragment(), "Health");
         adapter.addFragment(new WealthFragment(), "Wealth");
+        adapter.addFragment(new FinanceFragment(), "Finance");
+        adapter.addFragment(new BusinessFragment(), "Business");
+        adapter.addFragment(new LegalFragment(), "Legal");
+        adapter.addFragment(new EducationFragment(), "Education");
+        adapter.addFragment(new RemediesFragment(), "Remedies");
+        adapter.addFragment(new KidsFragment(), "Kids");
+        adapter.addFragment(new ParentsFragment(), "Parents");
         viewPager.setAdapter(adapter);
     }
 
