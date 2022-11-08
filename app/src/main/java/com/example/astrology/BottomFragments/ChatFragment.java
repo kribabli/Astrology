@@ -72,12 +72,6 @@ public class ChatFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager);
         childFragmentManager = getChildFragmentManager();
 
-        for (int i = 0; i < tabLayout.getTabCount(); i++) {
-            View tab = ((ViewGroup) tabLayout.getChildAt(0)).getChildAt(i);
-            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) tab.getLayoutParams();
-            p.setMargins(0, 0, 0, 0);
-            tab.requestLayout();
-        }
         setUpViewPager(viewPager);
         tabLayout.setupWithViewPager(viewPager);
         setupTabIcons();
