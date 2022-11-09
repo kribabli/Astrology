@@ -6,158 +6,587 @@
     android:layout_height="match_parent"
     tools:context=".BottomFragments.HomeFragment">
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/border_radius_white"
-        app:iconifiedByDefault="false"
-        app:queryHint="Search astrologers, astromall products" />
-
-    <LinearLayout
-        android:id="@+id/linerLayout1"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/search_view"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:weightSum="10">
+        android:layout_marginBottom="10dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2.5"
-            android:gravity="center">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/border_radius_white"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search astrologers, astromall products" />
+
+            <LinearLayout
+                android:id="@+id/linerLayout1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/border_full_rounded"
-                android:clickable="true"
-                android:drawableStart="@drawable/daily_horoscope"
-                android:foreground="?selectableItemBackground"
-                android:gravity="center"
-                android:padding="8dp" />
+                android:layout_below="@+id/search_view"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="10">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:gravity="center">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2.5"
-            android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_full_rounded"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/daily_horoscope"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="8dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_full_rounded"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/free_kundli"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/kundli_matching"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_full_rounded"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/kundli_matching"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/free_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_full_rounded"
+                        android:clickable="true"
+                        android:drawableStart="@drawable/free_chat"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="8dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout1"
                 android:layout_gravity="center"
-                android:background="@drawable/border_full_rounded"
-                android:clickable="true"
-                android:drawableStart="@drawable/free_kundli"
-                android:foreground="?selectableItemBackground"
-                android:gravity="center"
-                android:padding="8dp" />
+                android:orientation="horizontal"
+                android:weightSum="10">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:text="Daily\nHoroscope"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2.5"
-            android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:text="Free\nKundli"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/kundli_matching"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:text="Kundli\nMatching"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:gravity="center"
+                    android:text="Free\nChat"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_bannerItem"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_below="@+id/linerLayout2"
+                android:layout_gravity="top"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp" />
+
+            <LinearLayout
+                android:id="@+id/linerLayout3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/border_full_rounded"
-                android:clickable="true"
-                android:drawableStart="@drawable/kundli_matching"
-                android:foreground="?selectableItemBackground"
-                android:gravity="center"
-                android:padding="8dp" />
+                android:layout_below="@+id/view_bannerItem"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Live Astrologers"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="2.5"
-            android:gravity="center">
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
 
-            <TextView
-                android:id="@+id/free_chat"
-                android:layout_width="wrap_content"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout4"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout3"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:padding="2dp"
+                    android:text="Astrologers"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <include layout="@layout/astrologers_list" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout4"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Latest from blog"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout5"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop at Astromall"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout6"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Behind the scenes"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout7"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Client Testimonials"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout8"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Astrotalk in news"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout9"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout10"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <include layout="@layout/today_panchang" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout11"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Watch Astrology Videos"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout12"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Give Feedback"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Share your feedback to help us improve the app"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/border_radius_yellow"
+                    android:gravity="top"
+                    android:hint="Start typing here.."
+                    android:inputType="textMultiLine"
+                    android:padding="2dp"
+                    android:textSize="13sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:gravity="center"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/send"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/border_radius_white"
+                        android:backgroundTint="@color/yellow"
+                        android:clickable="true"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:text="Send"
+                        android:textColor="@color/black"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:layout_weight="5"
+                        android:background="@drawable/border_radius_white"
+                        android:clickable="true"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:text="Cancel"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linerLayout14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linerLayout13"
                 android:layout_gravity="center"
-                android:background="@drawable/border_full_rounded"
-                android:clickable="true"
-                android:drawableStart="@drawable/free_chat"
-                android:foreground="?selectableItemBackground"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
                 android:gravity="center"
-                android:padding="8dp" />
+                android:orientation="horizontal"
+                android:weightSum="15">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:src="@drawable/private_confi" />
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:src="@drawable/verified_astrologers1" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linerLayout1"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:weightSum="10">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_baseline_security_24" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_weight="2.5"
-            android:gravity="center"
-            android:text="Daily\nHoroscope"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            </LinearLayout>
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="4dp"
-            android:layout_weight="2.5"
-            android:gravity="center"
-            android:text="Free\nKundli"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+            <LinearLayout
+                android:id="@+id/linerLayout15"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/linerLayout14"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:weightSum="15">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="2dp"
-            android:layout_weight="2.5"
-            android:gravity="center"
-            android:text="Kundli\nMatching"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="Private &amp;\nConfidential"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2.5"
-            android:gravity="center"
-            android:text="Free\nChat"
-            android:textColor="@color/black"
-            android:textSize="12sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="Verified\nAstrologers"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:text="Secure\nPayments"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </RelativeLayout>

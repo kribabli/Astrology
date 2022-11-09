@@ -3,6 +3,7 @@ package com.example.astrology.BottomFragments;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.astrology.AllActivity.AstrologerProfileActivity;
 import com.example.astrology.AllActivity.KundliMatchingActivity;
 import com.example.astrology.R;
 
@@ -18,7 +20,8 @@ public class HomeFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private String mParam1;
     private String mParam2;
-    TextView kundli_matching, free_chat;
+    TextView kundli_matching;
+    CardView astrologersList;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -47,6 +50,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         kundli_matching = root.findViewById(R.id.kundli_matching);
+        astrologersList = root.findViewById(R.id.astrologersList);
+
         kundli_matching.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,6 +60,13 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        astrologersList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), AstrologerProfileActivity.class);
+                startActivity(intent);
+            }
+        });
         return root;
     }
 }
