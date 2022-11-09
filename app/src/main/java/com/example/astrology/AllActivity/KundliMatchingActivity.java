@@ -5,6 +5,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.astrology.AllAdapter.KundliPageAdapter;
 import com.example.astrology.R;
@@ -14,6 +16,7 @@ public class KundliMatchingActivity extends AppCompatActivity {
     ViewPager viewPager;
     TabLayout tabLayout;
     KundliPageAdapter pageAdapter;
+    TextView backPress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,7 @@ public class KundliMatchingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_kundli_matching);
         viewPager = findViewById(R.id.viewPager);
         tabLayout = findViewById(R.id.tabLayout);
+        backPress = findViewById(R.id.backPress);
 
         pageAdapter = new KundliPageAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(pageAdapter);
@@ -43,5 +47,12 @@ public class KundliMatchingActivity extends AppCompatActivity {
         });
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        backPress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 }
