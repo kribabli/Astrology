@@ -1,9 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AllActivity.AstrologerProfileActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/linerLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/border_radius_white"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:foreground="?selectableItemBackground"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profilePic"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_profile_pic"
+                    android:visibility="visible"
+                    app:civ_border_color="#efefef"
+                    app:civ_border_width="2dp"
+                    app:civ_circle_background_color="@android:color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_gravity="top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:text="User Name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Vedic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userName"
+                    android:backgroundTint="#5EB7DA"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Vedic, Face Reading"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/dateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/Vedic"
+                    android:backgroundTint="#5EB7DA"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="English, Telugu, Hindi"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dateTime"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="Exp: 10 Years"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address"
+                    android:drawableStart="@drawable/ic_baseline_currency_rupee_24"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="27/min"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RelativeLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_toRightOf="@+id/RelativeLayout1">
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginEnd="15dp"
+                    android:clickable="true"
+                    android:drawableEnd="@drawable/ic_dots"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center"
+                    android:padding="9dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line2"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_chat_small"
+                android:gravity="center"
+                android:text="44K mins" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/gray" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_call_small"
+                android:gravity="center"
+                android:text="31 mins" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
